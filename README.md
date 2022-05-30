@@ -12,7 +12,7 @@
 
 1. - clone the project
  ```
-  git clone [https://github.com/immmmmortal/odz.git](https://github.com/immmmmortal/BEDOLAGA_SITE.git)
+  git clone https://github.com/immmmmortal/BEDOLAGA_SITE.git
  ```
 2. - create and start a a virtual environment
  ```
