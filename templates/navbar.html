@@ -1,0 +1,23 @@
+<nav class="navbar">
+    <div class="brand-title"><a class="a-title" href="{% url 'home' %}">Demon&Android</a></div>
+    <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'user_logout' %}">Logout</a></li>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sessionModal">
+                    See session info
+                </button>
+            {% else %}
+                <li><a href="{% url 'user_login' %}">Login</a></li>
+                <li><a href="{% url 'user_registration' %}">Register</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>

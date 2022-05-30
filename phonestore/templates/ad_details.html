@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block body-content %}
+
+    <div class="product-card">
+        <div class="badge">Hot</div>
+        <div class="product-tumb">
+            <img src='{{ object.image.url }}' alt="ad_image">
+        </div>
+        <div class="product-details">
+            <span class="product-catagory">{{ object.category.title }}</span>
+            <h4><a href="">{{ object.title }}</a></h4>
+            <p>{{ object.item_description }}</p>
+            <div class="product-bottom-details">
+                <div class="product-price"><small>${{ object.price|add:"-20" }}</small>${{ object.price }}</div>
+                <div class="product-links">
+                    <a href=""><i class="fa fa-heart"></i></a>
+                    <a href=""><i class="fa fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
